@@ -34,7 +34,6 @@ import sharedMessages from '@ttn-lw/lib/shared-messages'
 
 import { unit as unitRegexp, emptyDuration as emptyDurationRegexp } from '@console/lib/regexp'
 
-import m from './messages'
 import validationSchema from './validation-schema'
 
 class GatewayDataForm extends React.Component {
@@ -123,7 +122,7 @@ class GatewayDataForm extends React.Component {
         <Form.Field
           title={sharedMessages.gatewayID}
           name="ids.gateway_id"
-          placeholder={m.gatewayIdPlaceholder}
+          placeholder={sharedMessages.gatewayIdPlaceholder}
           required
           disabled={update}
           component={Input}
@@ -139,21 +138,21 @@ class GatewayDataForm extends React.Component {
         />
         <Form.Field
           title={sharedMessages.gatewayName}
-          placeholder={m.gatewayNamePlaceholder}
+          placeholder={sharedMessages.gatewayNamePlaceholder}
           name="name"
           component={Input}
         />
         <Form.Field
           title={sharedMessages.gatewayDescription}
-          description={m.gatewayDescDescription}
-          placeholder={m.gatewayDescPlaceholder}
+          description={sharedMessages.gatewayDescDescription}
+          placeholder={sharedMessages.gatewayDescPlaceholder}
           name="description"
           type="textarea"
           component={Input}
         />
         <Form.Field
           title={sharedMessages.gatewayServerAddress}
-          description={m.gsServerAddressDescription}
+          description={sharedMessages.gsServerAddressDescription}
           placeholder={sharedMessages.addressPlaceholder}
           name="gateway_server_address"
           component={Input}
@@ -163,7 +162,7 @@ class GatewayDataForm extends React.Component {
           name="status_public"
           component={Checkbox}
           label={sharedMessages.public}
-          description={m.statusDescription}
+          description={sharedMessages.statusDescription}
         />
         <Form.Field
           name="attributes"
@@ -179,11 +178,11 @@ class GatewayDataForm extends React.Component {
           title={sharedMessages.automaticUpdates}
           name="auto_update"
           component={Checkbox}
-          description={m.autoUpdateDescription}
+          description={sharedMessages.autoUpdateDescription}
         />
         <Form.Field
           title={sharedMessages.channel}
-          description={m.updateChannelDescription}
+          description={sharedMessages.updateChannelDescription}
           placeholder={sharedMessages.stable}
           name="update_channel"
           component={Input}
@@ -194,21 +193,21 @@ class GatewayDataForm extends React.Component {
           title={sharedMessages.gatewayScheduleDownlinkLate}
           name="schedule_downlink_late"
           component={Checkbox}
-          description={m.scheduleDownlinkLateDescription}
+          description={sharedMessages.scheduleDownlinkLateDescription}
         />
         <Form.Field
-          title={m.dutyCycle}
+          title={sharedMessages.dutyCycle}
           name="enforce_duty_cycle"
           component={Checkbox}
-          label={m.enforced}
-          description={m.enforceDutyCycleDescription}
+          label={sharedMessages.enforced}
+          description={sharedMessages.enforceDutyCycleDescription}
         />
         <Form.Field
-          title={m.scheduleAnyTimeDelay}
+          title={sharedMessages.scheduleAnyTimeDelay}
           name="schedule_anytime_delay"
           component={UnitInput}
           description={{
-            ...m.scheduleAnyTimeDescription,
+            ...sharedMessages.scheduleAnyTimeDescription,
             values: {
               minimumValue: delay.MINIMUM_GATEWAY_SCHEDULE_ANYTIME_DELAY,
               defaultValue: delay.DEFAULT_GATEWAY_SCHEDULE_ANYTIME_DELAY,
@@ -224,7 +223,7 @@ class GatewayDataForm extends React.Component {
           warning={
             shouldDisplayWarning
               ? {
-                  ...m.delayWarning,
+                  ...sharedMessages.delayWarning,
                   values: { minimumValue: delay.MINIMUM_GATEWAY_SCHEDULE_ANYTIME_DELAY },
                 }
               : undefined
