@@ -15,10 +15,6 @@
 import { defineMessages } from 'react-intl'
 
 const messages = defineMessages({
-  basicTitle: 'Basic settings',
-  basicDescription: 'General settings, gateway updates and metadata',
-  lorawanTitle: 'LoRaWAN options',
-  lorawanDescription: 'LoRaWAN network-layer settings',
   enforced: 'Enforced',
   delayWarning:
     'Delay too short. The lower bound ({minimumValue}ms) will be used by the Gateway Server.',
